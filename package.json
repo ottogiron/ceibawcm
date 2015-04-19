@@ -1,0 +1,30 @@
+{
+  "name": "ceibawcm",
+  "version": "0.1.0",
+  "description": "Web Content Managemente API for Ceiba CMS",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --check-leaks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ottogiron/ceibawcm.git"
+  },
+  "keywords": [
+    "ceibacms",
+    "node.js"
+  ],
+  "author": "Otto Giron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ottogiron/ceibawcm/issues"
+  },
+  "homepage": "https://github.com/ottogiron/ceibawcm",
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "mocha": "^2.2.4"
+  },
+  "dependencies": {
+    "lodash": "^3.7.0"
+  }
+}
