@@ -12,7 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 9100, host: 9100
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "ubuntu-modeshape-wildfly"
 
   config.vm.provider "virtualbox" do |v|
     v.memory = 1024
@@ -23,14 +23,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = "modeshape.dev"
 
   #Provisioning
-  config.vm.provision :shell, :inline => "sudo apt-get update"
+  #config.vm.provision :shell, :inline => "sudo apt-get update"
 
-  config.vm.provision "puppet" do |puppet|
-    puppet.manifests_path = "puppet/manifests"
-    puppet.manifest_file = "site.pp"
-    puppet.module_path = "puppet/modules"
-  end
-
+  # config.vm.provision "puppet" do |puppet|
+  #   puppet.manifests_path = "puppet/manifests"
+  #   puppet.manifest_file = "site.pp"
+  #   puppet.module_path = "puppet/modules"
+  # end
 
 
 
